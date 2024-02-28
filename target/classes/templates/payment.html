@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+<h1>Payment Information</h1>
+<p th:text="'Amount: ' + ${currency} + ' ' + ${amount}"></p>
+<p>Email: <span th:text="${email}"></span></p>
+<p>Reference Code: <span th:text="${referenceCode}"></span></p>
+<!-- Add a button or link to initiate the payment -->
+<a th:href="@{/pay}" class="btn btn-primary">Pay Now</a>
+</body>
+</html>
